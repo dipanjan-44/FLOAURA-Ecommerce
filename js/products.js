@@ -1,0 +1,15 @@
+// FLOAURA demo catalogue — illustrative prices, to be confirmed by the client.
+const PRODUCTS = [
+{id:"p1",name:"Blush Bubble Bloom",category:"Balloons",price:3499,image:"images/balloons/pink-bubble-arrangement.jpg",tag:"Bestseller",description:"A dreamy transparent bubble balloon paired with delicate blooms and a personalized message. A keepsake-worthy surprise for someone special."},
+{id:"p2",name:"Golden Birthday Hamper",category:"Balloons",price:2799,image:"images/balloons/gold-birthday-hamper.jpg",tag:"Personalised",description:"A golden touch for their special day. A statement balloon arrangement styled with warm tones and thoughtful gifting details."},
+{id:"p3",name:"Garden Romance Bouquet",category:"Bouquets",price:2499,image:"images/bouquets/red-mixed-bouquet.jpg",tag:"Loved",description:"A lush gathering of seasonal blooms, soft pinks and romantic reds, finished in signature FLOAURA wrapping."},
+{id:"p4",name:"Sunshine Lily Bouquet",category:"Bouquets",price:2199,image:"images/bouquets/yellow-lily-bouquet.jpg",tag:"Fresh pick",description:"Bright lilies and soft pastel roses come together in a cheerful arrangement made to brighten their day."},
+{id:"p5",name:"Butterfly Luxe Bouquet",category:"Bouquets",price:3299,image:"images/bouquets/butterfly-bouquet.jpg",tag:"Signature",description:"A whimsical butterfly-inspired statement bouquet, designed to make an entrance and create a lasting memory."},
+{id:"p6",name:"The Grand Ruffle",category:"Bouquets",price:3999,image:"images/bouquets/statement-ruffle-bouquet.jpg",tag:"Statement",description:"An abundant, dramatic arrangement with layers of premium wrapping and carefully selected blooms."},
+{id:"p7",name:"Premium Flower Hamper",category:"Hampers",price:2999,image:"images/hampers/premium-flower-hamper.jpg",tag:"Bestseller",description:"A thoughtful mix of flowers and little treats, beautifully arranged in a keepsake hamper."},
+{id:"p8",name:"Chocolate & Blooms Hamper",category:"Hampers",price:3599,image:"images/hampers/chocolate-flower-hamper.jpg",tag:"For chocolate lovers",description:"A generous gifting box bringing together flowers and chocolate favourites for a deliciously thoughtful surprise."},
+{id:"p9",name:"Forever Red Roses",category:"Bouquets",price:2799,image:"images/bouquets/red-rose-bouquet.jpg",tag:"Classic",description:"A timeless gathering of red roses, wrapped with care and finished with a signature ribbon."},
+{id:"p10",name:"Classic Rose Affair",category:"Bouquets",price:3199,image:"images/bouquets/classic-red-rose-bouquet.jpg",tag:"Romantic",description:"A full, elegant rose bouquet for the moments when only a classic gesture will do."}
+];
+function money(n){return "₹"+Number(n).toLocaleString("en-IN");}
+function productCard(p){return `<article class="product-card"><a class="product-image" href="product.html?id=${p.id}"><img src="${p.imageSrc || "../"+p.image}" alt="${p.name}" loading="lazy"><span class="product-tag">${p.tag}</span></a><div class="product-info"><span class="product-category">${p.category}</span><h3><a href="product.html?id=${p.id}">${p.name}</a></h3><span class="product-price">${money(p.price)}</span></div></article>`;}
